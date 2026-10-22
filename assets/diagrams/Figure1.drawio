@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net" modified="2026-10-07T08:00:00.000Z" agent="Antigravity" version="24.0.0" type="device">
+  <diagram id="fig1_workflow" name="Figure 1 - Sensing-to-Inference Workflow">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="700" background="#FFFFFF" math="1" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" parent="1" vertex="1" value="End-to-End Spaceborne Sensing-to-Inference Framework for XCO2 Plume Delineation" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;fontFamily=Helvetica;fontColor=#1A2530;">
+          <mxGeometry x="250" y="15" width="1100" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" parent="1" vertex="1" value="1. Spaceborne Remote Sensing" style="swimlane;startSize=28;horizontal=1;container=1;collapsible=0;rounded=1;arcSize=6;strokeWidth=1.5;fillColor=#F4F7FB;strokeColor=#2B6CB0;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;fontColor=#1D3557;">
+          <mxGeometry x="30" y="60" width="270" height="480" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Satellite Platform&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;CO2M / OCO-2 / OCO-3&amp;lt;br&amp;gt;Polar Sun-Synchronous Orbit&amp;lt;br&amp;gt;Altitude ~705 km" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="50" y="100" width="230" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" parent="1" vertex="1" value="&amp;lt;b&amp;gt;SWIR Spectrometer&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;CO2 absorption bands (1.6 &amp;amp; 2.06 µm)&amp;lt;br&amp;gt;Spatial resolution 2×2 km²&amp;lt;br&amp;gt;Push-broom imaging swath" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="50" y="190" width="230" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Atmospheric Retrieval&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Full-physics radiative transfer&amp;lt;br&amp;gt;XCO2 column-averaged dry-air mole fraction (ppm)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="50" y="290" width="230" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Target Scenes&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Urban areas (Berlin, Paris)&amp;lt;br&amp;gt;Power plants (Boxberg, Lippendorf)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#EDF2F7;strokeColor=#4A5568;strokeWidth=1.5;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;fontColor=#1A202C;">
+          <mxGeometry x="50" y="385" width="230" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" parent="1" vertex="1" value="2. Scene Tile Extraction &amp;amp; Noise" style="swimlane;startSize=28;horizontal=1;container=1;collapsible=0;rounded=1;arcSize=6;strokeWidth=1.5;fillColor=#FFF8F0;strokeColor=#C05621;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;fontColor=#7B341E;">
+          <mxGeometry x="330" y="60" width="270" height="480" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Regional Tile Cutout&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Grid size: H × W (e.g. 64 × 64)&amp;lt;br&amp;gt;Centered over emission source" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="350" y="100" width="230" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Atmospheric Background&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Large-scale biogenic gradients&amp;lt;br&amp;gt;Mean baseline ~402–415 ppm&amp;lt;br&amp;gt;Spatial trends &amp;amp; surface albedo" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="350" y="185" width="230" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Observational Degradation&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;• Random instrument noise (σ ~ 0.7 ppm)&amp;lt;br&amp;gt;• Cloud &amp;amp; aerosol screening artifacts&amp;lt;br&amp;gt;• Weak anomaly contrast (ΔXCO2 ~ 1–3 ppm)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#EDF2F7;strokeColor=#4A5568;strokeWidth=1.5;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;fontColor=#1A202C;">
+          <mxGeometry x="350" y="280" width="230" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Noisy Observation Tile&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;X&amp;lt;/b&amp;gt; ∈ ℝ^(B × 1 × H × W)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="350" y="395" width="230" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="30" parent="1" vertex="1" value="3. Proposed Joint Analytics Engine" style="swimlane;startSize=28;horizontal=1;container=1;collapsible=0;rounded=1;arcSize=6;strokeWidth=1.5;fillColor=#F2F9F5;strokeColor=#276749;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;fontColor=#1B4332;">
+          <mxGeometry x="630" y="60" width="330" height="480" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Shared ConvTransformer Encoder&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Multi-scale hierarchical tokens (F1, F2, F3)&amp;lt;br&amp;gt;Local-window attention + Relative pos bias" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#EDF2F7;strokeColor=#4A5568;strokeWidth=1.5;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;fontColor=#1A202C;">
+          <mxGeometry x="650" y="100" width="290" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Auxiliary Denoising Pathway&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Pretrained reconstruction decoder&amp;lt;br&amp;gt;Total variation &amp;amp; Plume mass conservation&amp;lt;br&amp;gt;Continuous concentration regression" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="650" y="190" width="290" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Multi-Scale Segmentation Pathway&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;• Feature Pyramid Network (FPN)&amp;lt;br&amp;gt;• Channel-gating recalibration (GAP+Sigmoid)&amp;lt;br&amp;gt;• Multi-resolution fusion &amp;amp; ConvTransformer head" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="650" y="290" width="290" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="34" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Physics Loss Coupling&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;L_total = 0.3 L_den + 0.7 L_seg&amp;lt;br&amp;gt;L_phys penalty for baseline violations" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#EDF2F7;strokeColor=#4A5568;strokeWidth=1.5;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;fontColor=#1A202C;">
+          <mxGeometry x="650" y="395" width="290" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="40" parent="1" vertex="1" value="4. Quantitative Outputs" style="swimlane;startSize=28;horizontal=1;container=1;collapsible=0;rounded=1;arcSize=6;strokeWidth=1.5;fillColor=#FAF5FF;strokeColor=#6B46C1;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;fontColor=#322659;">
+          <mxGeometry x="990" y="60" width="270" height="480" as="geometry"/>
+        </mxCell>
+        <mxCell id="41" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Restored XCO2 Field (X̂)&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Denoised continuous concentrations&amp;lt;br&amp;gt;Subtle plume enhancements preserved&amp;lt;br&amp;gt;Noise floor suppressed" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#EDF2F7;strokeColor=#4A5568;strokeWidth=1.5;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;fontColor=#1A202C;">
+          <mxGeometry x="1010" y="110" width="230" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="42" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Plume Probability Map (M̂)&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Per-pixel plume confidence ∈ [0, 1]&amp;lt;br&amp;gt;Calibrated spatial uncertainty&amp;lt;br&amp;gt;Sharp plume boundaries" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#EDF2F7;strokeColor=#4A5568;strokeWidth=1.5;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;fontColor=#1A202C;">
+          <mxGeometry x="1010" y="220" width="230" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="43" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Binary Mask Delineation&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Thresholded footprint M_thresh&amp;lt;br&amp;gt;Isolated point/urban plume geometry&amp;lt;br&amp;gt;High IoU and low NWBCE" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="1010" y="330" width="230" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="50" parent="1" vertex="1" value="5. Geospatial &amp;amp; Climate Applications" style="swimlane;startSize=28;horizontal=1;container=1;collapsible=0;rounded=1;arcSize=6;strokeWidth=1.5;fillColor=#FEFCBF;strokeColor=#B7791F;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;fontColor=#744210;">
+          <mxGeometry x="1290" y="60" width="280" height="480" as="geometry"/>
+        </mxCell>
+        <mxCell id="51" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Cross-Sectional Flux Inversion&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Integration with wind speed vectors:&amp;lt;br&amp;gt;Q = ∫ U_eff · (XCO2 - X_bg) dl" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="1310" y="100" width="240" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="52" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Point Source Verification&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Facility-level reporting vs. inventories&amp;lt;br&amp;gt;Independent MRV (Measurement, Reporting &amp;amp; Verification)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="1310" y="195" width="240" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="53" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Urban Carbon Budgets&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Distinguishing diffuse urban emissions&amp;lt;br&amp;gt;from surrounding biosphere fluxes" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E0;strokeWidth=1.2;fontFamily=Helvetica;fontSize=10;align=center;fontColor=#2D3748;">
+          <mxGeometry x="1310" y="290" width="240" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="54" parent="1" vertex="1" value="&amp;lt;b&amp;gt;GIS &amp;amp; Policy Decision Support&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Operational climate mitigation actions&amp;lt;br&amp;gt;Global Stocktake compliance" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#EDF2F7;strokeColor=#4A5568;strokeWidth=1.5;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;fontColor=#1A202C;">
+          <mxGeometry x="1310" y="385" width="240" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="101" parent="1" vertex="1" edge="1" source="10" target="20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B6CB0;strokeWidth=2.2;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="102" parent="1" vertex="1" edge="1" source="20" target="30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B6CB0;strokeWidth=2.2;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="103" parent="1" vertex="1" edge="1" source="30" target="40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B6CB0;strokeWidth=2.2;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="104" parent="1" vertex="1" edge="1" source="40" target="50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B6CB0;strokeWidth=2.2;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="60" parent="1" vertex="1" value="&amp;lt;b&amp;gt;Key Pipeline Advantage:&amp;lt;/b&amp;gt; By coupling satellite restoration and segmentation in a shared hierarchical representation, the framework overcomes low signal-to-noise ratios (SNR), preserves weak diffuse plume tails, and provides reliable inputs for downstream carbon flux inversion." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#F8F9FA;strokeColor=#BDC3C7;strokeWidth=1;fontFamily=Helvetica;fontSize=10;fontColor=#2D3748;align=center;">
+          <mxGeometry x="30" y="560" width="1540" height="35" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
