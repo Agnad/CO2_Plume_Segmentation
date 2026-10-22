@@ -1,0 +1,15 @@
+# Core Deep Learning Framework
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Tensor Manipulation & Multi-Scale Attention
+einops>=0.6.0
+pytorch-msssim>=1.0.0
+
+# Numerical, Geospatial & Scientific Processing
+numpy>=1.24.0
+scipy>=1.10.0
+Pillow>=9.5.0
+
+# Visualization & Diagram Rendering
+matplotlib>=3.7.0

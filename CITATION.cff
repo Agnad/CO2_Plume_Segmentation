@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you find this research codebase or architecture useful for your work, please cite our manuscript as below."
+title: "Restoration-Aware Joint Learning for Robust CO2 Plume Segmentation from Noisy XCO2 Observations"
+authors:
+  - family-names: Verma
+    given-names: Anil
+    orcid: "https://orcid.org/0009-0004-0457-8966"
+    email: "anil_2321cs11@iitp.ac.in"
+    affiliation: "Department of Computer Science and Engineering, Indian Institute of Technology Patna, India"
+  - family-names: Sah
+    given-names: Rupesh Kumar
+    orcid: "https://orcid.org/0009-0007-7713-7354"
+    email: "rupesh_2421cs03@iitp.ac.in"
+    affiliation: "Department of Computer Science and Engineering, Indian Institute of Technology Patna, India"
+  - family-names: Misra
+    given-names: Rajiv
+    email: "rajivmi@iitp.ac.in"
+    affiliation: "Department of Computer Science and Engineering, Indian Institute of Technology Patna, India"
+  - family-names: Singh
+    given-names: Trilok Nath
+    email: "tnsing@iitp.ac.in"
+    affiliation: "Department of Earth and Environmental Sciences, Indian Institute of Technology Patna, India"
+journal: "Computers & Geosciences"
+year: 2026
+keywords:
+  - "XCO2"
+  - "CO2 plume segmentation"
+  - "joint learning"
+  - "image restoration"
+  - "satellite remote sensing"
+  - "greenhouse gas monitoring"
+  - "deep learning"
