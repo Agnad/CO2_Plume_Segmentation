@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you find this research codebase or architecture useful for your work, please cite our manuscript as below."
 title: "Restoration-Aware Joint Learning for Robust CO2 Plume Segmentation from Noisy XCO2 Observations"
+repository-code: "https://github.com/Agnad/CO2_Plume_Segmentation"
 authors:
   - family-names: Verma
     given-names: Anil

@@ -133,8 +133,8 @@ XCO2-Plume-Joint-Learning/
 
 ```bash
 # Clone the repository
-git clone https://github.com/<username>/XCO2-Plume-Joint-Learning.git
-cd XCO2-Plume-Joint-Learning
+git clone https://github.com/Agnad/CO2_Plume_Segmentation.git
+cd CO2_Plume_Segmentation
 
 # Create and activate conda environment
 conda env create -f environment.yml
